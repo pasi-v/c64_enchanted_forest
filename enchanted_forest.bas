@@ -7,6 +7,13 @@
 60 for i=1 to len(r$(rm))
 70     print mid$(r$(rm),i,1);", ";
 80 next i
+90 rem visible objects (flag=0)
+100 for i=1 to g
+110     if l(i)=rm and f(i)=0 then print "I see ";o$(i);" here"
+120 next i
+130 rem message, if any
+140 print m$
+150 m$="What?": rem to be overwritten by subroutine
    
 200 rem input analysis
     
