@@ -1,18 +1,20 @@
-10 rem reserve arrays
-20 nr=49: rem number of rooms
-30 dim d$(nr): rem room descriptions
-40 dim r$(nr): rem routes
-50 w=29: rem number of object words
-60 dim o$(w): rem object words
-70 v=17: rem number of verbs
-80 dim v$(v): rem verbs
-90 g=8: rem number of gettable objects
-100 dim l(g): rem locations of gettable objects
-110 dim c(g): rem which objects player is carrying
-120 dim f(w): rem state of each object: 0=inactive, 1=activated
-130 gosub 10000: rem initialise data
- 
-10000 rem initialise
+10 gosub 9000: rem initialize
+   
+8998 end   
+8999 rem initialize 
+9000 rem reserve arrays
+9010 nr=49: rem number of rooms
+9020 dim d$(nr): rem room descriptions
+9030 dim r$(nr): rem routes
+9040 w=29: rem number of object words
+9050 dim o$(w): rem object words
+9060 v=17: rem number of verbs
+9070 dim v$(v): rem verbs
+9080 g=8: rem number of gettable objects
+9090 dim l(g): rem locations of gettable objects
+9100 dim c(g): rem which objects player is carrying
+9110 dim f(w): rem state of each object: 0=normal/inactive, 1=activated
+    
 10005 rem room descriptions
 10010 for i=0 to nr-1
 10020     read d$(i)
@@ -53,7 +55,7 @@
 20080 data "Lost traveler's camp", Crumbling temple, Timeworn library, Echoing hall, Forgotten garden, Wishing stones, Forgotten altar
       
 20100 rem routes, r$()
-20110 data d,s,se,wse,wse,wse,wse,ws
+20110 data d,s,se,wse,wse,wse,ws
 20120 data use,nwse,nwe,nw,ne,nwe,nws
 20130 data ns,nwse,ws,e,we,wse,nw
 20140 data nes,nesw,nw,se,sw,ne,ws
@@ -67,8 +69,8 @@
 20230 data wall, star chart, star, moon, comet, sun, planet, fern, bush, altar
       
 20300 rem verbs, v$()
-20310 data help,inventory,go,n,s,w,e,u,d,get,take,examine,use,touch,listen,speak,score
-      
+20310 data help, inventory, go, n, s, w, e, u, d, "get", take, examine, use, touch, listen, speak, score
+
 20400 rem locations of gettable objects, l()
 20410 data 17,34,1,37,21,27,48,0
 
