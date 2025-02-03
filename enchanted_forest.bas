@@ -2,14 +2,19 @@
    
 20 rem description and feedback messages
 30 print "Your location:": print d$(rm)
+40 rem exits
+50 print "Exits: ";
+60 for i=1 to len(r$(rm))
+70     print mid$(r$(rm),i,1);", ";
+80 next i
    
-100 rem input analysis
+200 rem input analysis
     
-200 rem error messages and override conditions
+300 rem error messages and override conditions
     
-300 rem branch to subroutines
+400 rem branch to subroutines
     
-400 rem set up other messages
+500 rem set up other messages
     
    
 8998 end   
