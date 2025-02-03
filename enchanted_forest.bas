@@ -1,8 +1,23 @@
 10 gosub 9000: rem initialize
    
+20 rem description and feedback messages
+30 print "Your location:": print d$(rm)
+   
+100 rem input analysis
+    
+200 rem error messages and override conditions
+    
+300 rem branch to subroutines
+    
+400 rem set up other messages
+    
+   
 8998 end   
 8999 rem initialize 
 9000 rem reserve arrays
+9001 print chr$(14): rem character set
+9002 print "{clr}Enchanted Forest": print "Loading data..."
+9005 rm=5: rem starting location
 9010 nr=49: rem number of rooms
 9020 dim d$(nr): rem room descriptions
 9030 dim r$(nr): rem routes
