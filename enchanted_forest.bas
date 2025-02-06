@@ -15,14 +15,61 @@
 140 print m$
 150 m$="What?": rem to be overwritten by subroutine
    
-200 rem input analysis
+200 rem input
+220 input q$
+230 v$=""
+240 w$=""
+250 for i=1 to len(q$)
+260     if mid$(q$,i,1)=" " and v$="" then v$=left$(q$,i-1)
+270     if mid$(q$,i+1,1)<>" " and v$<>"" then w$=mid$(q$,i+1,len(q$)-1): i=len(q$)
+280 next i
+290 if w$="" then v$=q$
+ 
+300 rem input analysis
+310 vb=0: rem index of matching verb
+320 for i=1 to v
+330     if v$=v$(i) then vb=i
+340 next i
     
-300 rem error messages and override conditions
+350 ob=0: rem index of matching object
+360 for i=1 to w
+370     if w$=o$(i) then ob=i
+380 next i
+	
+390 rem error messages
+400 if w$>"" and ob=0 then m$="That's silly": rem change to something sensible
+410 if vb=0 then vb=v+1
+420 if w$="" then m$="I need two words"
+430 if vb>v and ob>0 then m$="You can't '"+q$+"'"
+440 if vb>v and ob=0 then m$="I did not understand a word of that."
+450 if vb<v and ob>0 and c(ob)<>1 then m$="You don't have "o$(ob)
     
-400 rem branch to subroutines
+500 rem override conditions
     
-500 rem set up other messages
+600 rem branch to subroutines
+610 on vb gosub 1000,1100,1200,1200,1200,1200,1200,1200,1200
+620 rem ...the rest after writing go subroutine
     
+699 goto 20: rem end of main loop
+    
+1000 rem help
+1010 print "Words I know:"
+1020 for i=1 to v
+1030     print v$(i);", ";
+1040 next i
+1050 m$="":print
+1090 return
+     
+1100 rem inventory
+1110 print "You are carrying:"
+1120 for i=1 to g
+1130     if c(i)=1 then print o$(i);", ";
+1140 next i
+1150 m$="":print
+1190 return
+     
+1200 rem go and directions
+1300 return
    
 8998 end   
 8999 rem initialize 
