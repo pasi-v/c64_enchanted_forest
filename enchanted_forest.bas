@@ -47,8 +47,8 @@
 500 rem override conditions
     
 600 rem branch to subroutines
-610 on vb gosub 1000,1100,1200,1200,1200,1200,1200,1200,1200
-620 rem ...the rest after writing go subroutine
+610 on vb gosub 1000,1100,1200,1200,1200,1200,1200,1200,1200,1500,1500,1600,1700,1800,1900,2000,2100,2200
+620 rem ...the rest after writing go subroutine, continue with get
     
 699 goto 20: rem end of main loop
     
@@ -69,7 +69,44 @@
 1190 return
      
 1200 rem go and directions
-1300 return
+1210 d=0
+1220 if ob=0 then d=vb-3: rem what?
+1230 if ob=9 then d=1
+1240 if ob=10 then d=2
+1250 if ob=11 then d=3
+1260 if ob=12 then d=4
+1270 if ob=13 then d=5
+1280 if ob=14 then d=6
+1330 f(16)=0: rl=len(r$(rm))
+1340 for i=1 to rl
+1350     u$=mid$(r$(rm),i,1)
+1360     if u$="n" and d=1 and f(16)=0 then rm=rm-7: f(16)=1
+1370     if u$="s" and d=2 and f(16)=0 then rm=rm+7: f(16)=1
+1380     if u$="w" and d=3 and f(16)=0 then rm=rm-1: f(16)=1
+1390     if u$="e" and d=4 and f(16)=0 then rm=rm+1: f(16)=1
+1391     if u$="u" and d=5 and f(16)=0 then rm=rm-7: f(16)=1
+1392     if u$="d" and d=6 and f(16)=0 then rm=rm+7: f(16)=1
+1400 next i
+1410 m$="": rem no need to print message if ok
+1420 if f(16)=0 then m$="Can't go that way"
+1430 if d<1 then m$="Go where?"
+1440 return
+     
+1500 return
+     
+1600 return
+     
+1700 return
+     
+1800 return
+     
+1900 return
+     
+2000 return
+     
+2100 return
+     
+2200 return
    
 8998 end   
 8999 rem initialize 
@@ -116,6 +153,7 @@
 10240 rem f(11): Singing crystals restored
 10250 rem f(12-14): Sounds 1-3 heard
 10260 rem f(15): Echo petal loaded
+10270 rem f(16): Has found an exit
 19999 return
       
 20000 rem data
