@@ -1,17 +1,7 @@
 10 gosub 9000: rem initialize
+20 gosub 700: rem first location description
    
-20 rem description and feedback messages
-30 print "Your location:": print d$(rm)
-40 rem exits
-50 print "Exits: ";
-60 for i=1 to len(r$(rm))
-70     print mid$(r$(rm),i,1);", ";
-80 next i
-90 rem visible objects (flag=0)
-100 for i=1 to g
-110     if l(i)=rm and f(i)=0 then print "I see ";o$(i);" here"
-120 next i
-130 rem message, if any
+30 rem message, if any
 140 print m$
 150 m$="What?": rem to be overwritten by subroutine
    
@@ -42,7 +32,7 @@
 420 if w$="" then m$="I need two words"
 430 if vb>v and ob>0 then m$="You can't '"+q$+"'"
 440 if vb>v and ob=0 then m$="I did not understand a word of that."
-450 if vb<v and ob>0 and c(ob)<>1 then m$="You don't have "o$(ob)
+450 if vb<v and ob>0 and c(ob)=0 then m$="You don't have "+w$
     
 500 rem override conditions
     
@@ -50,7 +40,21 @@
 610 on vb gosub 1000,1100,1200,1200,1200,1200,1200,1200,1200,1500,1500,1600,1700,1800,1900,2000,2100,2200
 620 rem ...the rest after writing go subroutine, continue with get
     
-699 goto 20: rem end of main loop
+699 goto 30: rem end of main loop
+    
+700 rem print location description
+710 print "You are at ";d$(rm)
+720 rem exits
+730 print "Exits: ";
+740 for i=1 to len(r$(rm))
+750     print mid$(r$(rm),i,1);", ";
+760 next i
+770 print
+780 rem visible objects (flag=0)
+790 for i=1 to g
+800     if l(i)=rm and f(i)=0 then print "I see ";o$(i);" here"
+810 next i
+820 return
     
 1000 rem help
 1010 print "Words I know:"
@@ -88,26 +92,37 @@
 1392     if u$="d" and d=6 and f(16)=0 then rm=rm+7: f(16)=1
 1400 next i
 1410 m$="": rem no need to print message if ok
-1420 if f(16)=0 then m$="Can't go that way"
-1430 if d<1 then m$="Go where?"
-1440 return
+1420 if f(16)=0 then m$="Can't go that way": return
+1430 if d<1 then m$="Go where?": return
+1440 gosub 700: rem print location description
+1450 return
      
-1500 return
+1500 rem get and take
+1590 return
      
-1600 return
+1600 rem examine
+1690 return
      
-1700 return
+1700 rem use
+1790 return
      
-1800 return
+1800 rem touch
+1890 return
      
+1900 rem listen
 1900 return
      
-2000 return
+2000 rem speak
+2090 return
      
-2100 return
+2100 rem score
+2190 return
      
-2200 return
-   
+2200 rem look
+2210 gosub 700: rem print location description
+2220 m$=""
+2230 return
+     
 8998 end   
 8999 rem initialize 
 9000 rem reserve arrays
@@ -119,11 +134,11 @@
 9030 dim r$(nr): rem routes
 9040 w=29: rem number of object words
 9050 dim o$(w): rem object words
-9060 v=17: rem number of verbs
+9060 v=18: rem number of verbs
 9070 dim v$(v): rem verbs
 9080 g=8: rem number of gettable objects
 9090 dim l(g): rem locations of gettable objects
-9100 dim c(g): rem which objects player is carrying
+9100 dim c(w): rem which objects player is carrying
 9110 dim f(w): rem state of each object: 0=normal/inactive, 1=activated
     
 10005 rem room descriptions
@@ -181,7 +196,7 @@
 20230 data wall, star chart, star, moon, comet, sun, planet, fern, bush, altar
       
 20300 rem verbs, v$()
-20310 data help, inventory, go, n, s, w, e, u, d, "get", take, examine, use, touch, listen, speak, score
+20310 data help, inventory, go, n, s, w, e, u, d, "get", take, examine, use, touch, listen, speak, score, look
 
 20400 rem locations of gettable objects, l()
 20410 data 17,34,1,37,21,27,48,0
