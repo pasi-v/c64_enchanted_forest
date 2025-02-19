@@ -31,14 +31,13 @@
 410 if vb=0 then vb=v+1
 420 if w$="" then m$="I need two words"
 430 if vb>v and ob>0 then m$="You can't '"+q$+"'"
-440 if vb>v and ob=0 then m$="I did not understand a word of that."
+440 if vb>v and ob=0 then m$="I did not understand that."
 450 if vb<v and ob>0 and c(ob)=0 then m$="You don't have "+w$
     
 500 rem override conditions
     
 600 rem branch to subroutines
 610 on vb gosub 1000,1100,1200,1200,1200,1200,1200,1200,1200,1500,1500,1600,1700,1800,1900,2000,2100,2200
-620 rem ...the rest after writing go subroutine, continue with get
     
 699 goto 30: rem end of main loop
     
@@ -67,7 +66,7 @@
 1100 rem inventory
 1110 print "You are carrying:"
 1120 for i=1 to g
-1130     if c(i)=1 then print o$(i);", ";
+1130     if c(i)=1 then print o$(i)
 1140 next i
 1150 m$="":print
 1190 return
@@ -98,9 +97,25 @@
 1450 return
      
 1500 rem get and take
+1510 if ob>g then m$="I can't get "+w$: return
+1520 if l(ob) <> rm then m$="It isn't here"
+1530 if f(ob) <> 0 then m$="What "+w$+"?"
+1540 if c(ob)=1 then m$="You already have it"
+1550 if ob>0 and l(ob)=rm and f(ob)=0 then c(ob)=1: l(ob)=65: m$="You have the "+w$
 1590 return
      
 1600 rem examine
+1605 rem examine branches (19) at 0 to reveal lichen (8)
+1610 if rm=0 and ob=19 then f(8)=0: m$="You found beard lichen": return
+1615 rem examine wall (20) at 43 to reveal star chart (21)
+1620 if rm=43 and ob=20 then f(21)=0: m$="You found a star chart": return
+1625 rem examine star chart (21) at 43
+1630 if rm=43 and ob=21 then m$="You see star, moon and comet": return
+1635 rem examine fern (27) at 21 to reveal dewdrop (5)
+1640 if rm=21 and ob=27 then f(5)=0: m$="You found a misty dewdrop": return
+1645 rem examine bush (28) at 27 to reveal berry (6)
+1650 if rm=27 and ob=28 then f(6)=0: m$="You found a whispering berry": return
+1685 m$="You see nothing special about "+w$
 1690 return
      
 1700 rem use
