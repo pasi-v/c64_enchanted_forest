@@ -37,7 +37,7 @@
 500 rem override conditions
     
 600 rem branch to subroutines
-610 on vb gosub 1000,1100,1200,1200,1200,1200,1200,1200,1200,1500,1500,1600,1700,1800,1900,2000,2100,2200
+610 on vb gosub 1000,1100,1200,1200,1200,1200,1200,1200,1200,1500,1500,1600,1700,1800,1900,2000,2100,2200,2400,2400
     
 699 goto 30: rem end of main loop
     
@@ -68,7 +68,7 @@
 1120 for i=1 to g
 1130     if c(i)=1 then print o$(i)
 1140 next i
-1150 m$="":print
+1150 m$=""
 1190 return
      
 1200 rem go and directions
@@ -97,6 +97,7 @@
 1450 return
      
 1500 rem get and take
+1505 if (ob=4 or ob=5 or ob=1) and c(7)<>1 then m$="You need a vessel to carry it": return
 1510 if ob>g then m$="I can't get "+w$: return
 1520 if l(ob) <> rm then m$="It isn't here"
 1530 if f(ob) <> 0 then m$="What "+w$+"?"
@@ -132,9 +133,16 @@
 1890 return
      
 1900 rem listen
-1900 return
+1910 if rm=27 then f(12)=1: m$="The stones whisper about stars": return
+1920 if rm=34 then f(13)=1: m$="The stars above whisper about comets": return
+1930 if rm=41 then f(14)=1: m$="The willows whisper about moon": return
+1940 m$="Trees whisper incomprehensible things"
+1990 return
      
 2000 rem speak
+2010 rem if at altar (48) and have listened to all whispers reveal vessel
+2020 if rm=48 and f(12)=1 and f(13)=1 and f(14)=1 then f(7)=0: m$="The altar opens": return
+2080 m$="You speak of things but no one listens"
 2090 return
      
 2100 rem score
@@ -151,6 +159,12 @@
 2330 if f(17)=2 and ob=24 then f(4)=0: m$="The Celestial Tear forms in the air": return
 2340 f(17)=0: m$="All celestial symbols stop glowing"
 2350 return
+     
+2400 rem mix and brew
+2410 if rm=17 and c(4)=1 and c(5)=1 and c(6)=1 then f(1)=0: m$="You mix an essence": return
+2420 if rm=17 then m$="You are missing ingredients": return
+2480 m$="This is not the place to mix ingredients"
+2490 return
 
 8998 end   
 8999 rem initialize 
@@ -163,7 +177,7 @@
 9030 dim r$(nr): rem routes
 9040 w=29: rem number of object words
 9050 dim o$(w): rem object words
-9060 v=18: rem number of verbs
+9060 v=20: rem number of verbs
 9070 dim v$(v): rem verbs
 9080 g=8: rem number of gettable objects
 9090 dim l(g): rem locations of gettable objects
@@ -226,7 +240,7 @@
 20230 data wall, star chart, star, moon, comet, sun, planet, fern, bush, altar
       
 20300 rem verbs, v$()
-20310 data help, inventory, go, n, s, w, e, u, d, "get", take, examine, use, touch, listen, speak, score, look
+20310 data help, inventory, go, n, s, w, e, u, d, "get", take, examine, use, touch, listen, speak, score, look, mix, brew
 
 20400 rem locations of gettable objects, l()
 20410 data 17,34,1,37,21,27,48,0
