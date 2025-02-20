@@ -119,6 +119,9 @@
 1690 return
      
 1700 rem use
+1710 rem use lichen (8) at 1 to reveal fragment (3)
+1720 if rm=1 and ob=8 then f(3)=0: m$="The Heartstone Fragment is released": return
+1730 m$="It does not seem to do anything"
 1790 return
      
 1800 rem touch
