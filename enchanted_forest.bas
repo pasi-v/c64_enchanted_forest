@@ -127,7 +127,8 @@
 1800 rem touch
 1810 rem touch fragment (3) at 2 to recharge veins f(9)=1
 1820 if rm=2 and ob=3 then f(9)=1: m$="You recharge the Crystal Veins": return
-1830 m$="It does not work"
+1830 if rm=37 then gosub 2300: return: rem touch celestials
+1880 m$="It does not work"
 1890 return
      
 1900 rem listen
@@ -144,6 +145,13 @@
 2220 m$=""
 2230 return
      
+2300 rem touch celestials in correct order
+2310 if f(17)=0 and ob=22 then f(17)=1: m$="The star starts glowing": return
+2320 if f(17)=1 and ob=23 then f(17)=2: m$="The moon starts glowing": return
+2330 if f(17)=2 and ob=24 then f(4)=0: m$="The Celestial Tear forms in the air": return
+2340 f(17)=0: m$="All celestial symbols stop glowing"
+2350 return
+
 8998 end   
 8999 rem initialize 
 9000 rem reserve arrays
@@ -190,6 +198,7 @@
 10250 rem f(12-14): Sounds 1-3 heard
 10260 rem f(15): Echo petal loaded
 10270 rem f(16): Has found an exit
+10280 rem f(17): Correctly touched celestials in order star, moon, comet
 19999 return
       
 20000 rem data
