@@ -125,6 +125,9 @@
 1790 return
      
 1800 rem touch
+1810 rem touch fragment (3) at 2 to recharge veins f(9)=1
+1820 if rm=2 and ob=3 then f(9)=1: m$="You recharge the Crystal Veins": return
+1830 m$="It does not work"
 1890 return
      
 1900 rem listen
