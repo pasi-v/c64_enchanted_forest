@@ -113,7 +113,7 @@
 1625 rem examine star chart (21) at 43
 1630 if rm=43 and ob=21 then m$="You see star, moon and comet": return
 1635 rem examine fern (27) at 21 to reveal dewdrop (5)
-1640 if rm=21 and ob=27 then f(5)=0: m$="You found a misty dewdrop": return
+1640 if rm=28 and ob=27 then f(5)=0: m$="You found a misty dewdrop": return
 1645 rem examine bush (28) at 27 to reveal berry (6)
 1650 if rm=27 and ob=28 then f(6)=0: m$="You found a whispering berry": return
 1685 m$="You see nothing special about "+w$
@@ -248,7 +248,7 @@
 20310 data help, inventory, go, n, s, w, e, u, d, "get", take, examine, use, touch, listen, speak, score, look, mix, brew, pour
 
 20400 rem locations of gettable objects, l()
-20410 data 17,34,1,37,21,27,48,0
+20410 data 17,34,1,37,28,27,48,0
 
 
       
