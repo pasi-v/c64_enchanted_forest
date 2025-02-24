@@ -210,7 +210,7 @@
 10180     read l(i)
 10190 next i
 10200 rem flags for invisible objects
-10210 f(1)=1: f(2)=1: f(3)=1: f(4)=1: f(5)=1: f(6)=1: f(7)=1: f(8)=1
+10210 f(1)=1: f(2)=0: f(3)=1: f(4)=1: f(5)=1: f(6)=1: f(7)=1: f(8)=1
 10220 rem f(9): Crystal veins restored
 10230 rem f(10): Mirror pool restored
 10240 rem f(11): Singing crystals restored
@@ -248,7 +248,7 @@
 20310 data help, inventory, go, n, s, w, e, u, d, "get", take, examine, use, touch, listen, speak, score, look, mix, brew, pour
 
 20400 rem locations of gettable objects, l()
-20410 data 17,34,1,37,28,27,48,0
+20410 data 17,42,1,37,28,27,48,0
 
 
       
