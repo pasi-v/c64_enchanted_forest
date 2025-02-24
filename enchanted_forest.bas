@@ -94,7 +94,9 @@
 1420 if f(16)=0 then m$="Can't go that way": return
 1430 if d<1 then m$="Go where?": return
 1440 gosub 700: rem print location description
-1450 return
+1450 if rm=10 and f(11)=0 then gosub 3000: rem handle singing crystals
+1460 if rm=23 and c(2)=1 then gosub 3100: rem handle echo chamber
+1490 return
      
 1500 rem get and take
 1505 if (ob=4 or ob=5 or ob=1) and c(7)<>1 then m$="You need a vessel to carry it": return
@@ -170,6 +172,17 @@
 2510 if rm=9 and c(1)=1 then f(10)=1: m$="You purify the Mirror Pool": return
 2520 m$="This is not the place to pour anything"
 2590 return
+
+3000 rem location 10
+3010 rem if carrying unloaded (f(15)) echoing petal (2)
+3020 if c(2)=1 and f(15)=0 then m$="The petal echoes with the song of the   crystals, but something is missing.": return
+3030 if c(2)=1 and f(15)=1 then f(11)=1: m$="The petal sings to crystals and they    respond": return
+3040 m$="It is very silent"
+3090 return
+
+3100 rem echo chamber
+3110 if c(2)=1 then f(15)=1: m$="The petal collects the echoes of the    chamber": return
+3120 return
 
 8998 end   
 8999 rem initialize 
