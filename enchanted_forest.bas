@@ -131,6 +131,8 @@
 1810 rem touch fragment (3) at 2 to recharge veins f(9)=1
 1820 if rm=2 and ob=3 then f(9)=1: m$="You recharge the Crystal Veins": return
 1830 if rm=37 then gosub 2300: return: rem touch celestials
+1840 if rm=3 and f(9)=1 and f(10)=1 and f(11)=1 then gosub 3200: rem win
+1850 if rm=3 then m$="The obelisk is still corrupted": return
 1880 m$="It does not work"
 1890 return
      
@@ -183,6 +185,14 @@
 3100 rem echo chamber
 3110 if c(2)=1 then f(15)=1: m$="The petal collects the echoes of the    chamber": return
 3120 return
+
+3200 rem win
+3210 print"A small stream of silvery water flows   from the Mirror Pool to the obelisk.":print
+3220 print"A spark of lighting from the Crystal    Veins hits the obelisk.":print
+3230 print"The Crystals' song shatters the         corruption from the obelisk.":print
+3240 print"The Obelisk has been restored, and with it the magic to the forest.":print
+3250 print"You have succeeded in your quest!"
+3260 end
 
 8998 end   
 8999 rem initialize 
