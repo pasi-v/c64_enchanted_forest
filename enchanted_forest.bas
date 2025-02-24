@@ -37,7 +37,7 @@
 500 rem override conditions
     
 600 rem branch to subroutines
-610 on vb gosub 1000,1100,1200,1200,1200,1200,1200,1200,1200,1500,1500,1600,1700,1800,1900,2000,2100,2200,2400,2400
+610 on vb gosub 1000,1100,1200,1200,1200,1200,1200,1200,1200,1500,1500,1600,1700,1800,1900,2000,2100,2200,2400,2400, 2500
     
 699 goto 30: rem end of main loop
     
@@ -166,6 +166,11 @@
 2480 m$="This is not the place to mix ingredients"
 2490 return
 
+2500 rem pour
+2510 if rm=9 and c(1)=1 then f(10)=1: m$="You purify the Mirror Pool": return
+2520 m$="This is not the place to pour anything"
+2590 return
+
 8998 end   
 8999 rem initialize 
 9000 rem reserve arrays
@@ -177,7 +182,7 @@
 9030 dim r$(nr): rem routes
 9040 w=29: rem number of object words
 9050 dim o$(w): rem object words
-9060 v=20: rem number of verbs
+9060 v=21: rem number of verbs
 9070 dim v$(v): rem verbs
 9080 g=8: rem number of gettable objects
 9090 dim l(g): rem locations of gettable objects
@@ -240,7 +245,7 @@
 20230 data wall, star chart, star, moon, comet, sun, planet, fern, bush, altar
       
 20300 rem verbs, v$()
-20310 data help, inventory, go, n, s, w, e, u, d, "get", take, examine, use, touch, listen, speak, score, look, mix, brew
+20310 data help, inventory, go, n, s, w, e, u, d, "get", take, examine, use, touch, listen, speak, score, look, mix, brew, pour
 
 20400 rem locations of gettable objects, l()
 20410 data 17,34,1,37,21,27,48,0
