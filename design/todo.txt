@@ -1,0 +1,21 @@
+# TODO
+
++ alkuun selitys pelin tarkoituksesta
+- liikaa "Echo/Echoing" ja "Whispering"-alkuisia paikkoja => muokkaa nimiä
+  - Whispering:
+    + berry (avainesine) => Golden Berry
+    + branches: paikka josta lichen löytyy => Oak branches
+    + breeze => Faery circle, aloituspaikka tähän, eli 12
+        + Enchanted ring => Glinting hollow
+    - winds
+    - ferns
+    - willows
+  - Echoing
+    - petal (avainesine)
+    - Echo chambers (paikka, johon petal tuo kaiut)
+    - glade
+    - pool
+    - clearing
+    - hall
+- paikkojen kuvauksiin vihjettä mitä niissä pitäisi tehdä, ja muista kuvauksista vihjeenomaiset tekstit pois
+- loppuun onnittelutekstit
