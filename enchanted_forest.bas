@@ -258,6 +258,29 @@
 10260 rem f(15): Echo petal loaded
 10270 rem f(16): Has found an exit
 10280 rem f(17): Correctly touched celestials in order star, moon, comet
+      
+11000 print"{clr}You'd seen the ring of mushrooms"
+11001 print"before - half-hidden beneath leaves on"
+11002 print"the edge of the old trail. Something"
+11003 print"about it always made you pause. This"
+11004 print"morning, you stepped across it.":print
+11005 print"The air changed. The forest around you"
+11006 print"deepened into twilight. Colours"
+11007 print"shimmered. Silence thickened. You"
+11008 print"weren't sure if you were dreaming, but"
+11009 print"it felt familiar - as if you'd been"
+11010 print"here before, long ago, or in sleep.":print
+11011 print"Now you're surrounded by strange"
+11012 print"beauty... and quiet sorrow. Something"
+11013 print"in this place is wrong. The trees"
+11014 print"whisper it. The stones remember it.":print
+11015 print"There's a wound here. You can feel it.":print
+11016 print"And you know, somehow, that you are"
+11017 print"meant to set it right.":print:print
+11027 print"Press a key to start your adventure.";
+11037 get zz$:if zz$="" then 11037
+11047 print:print
+
 19999 return
       
 20000 rem data
