@@ -1,21 +1,22 @@
 # TODO
 
 + alkuun selitys pelin tarkoituksesta
-- liikaa "Echo/Echoing" ja "Whispering"-alkuisia paikkoja => muokkaa nimiä
-  - Whispering:
++ liikaa "Echo/Echoing" ja "Whispering"-alkuisia paikkoja => muokkaa nimiä
+  + Whispering:
     + berry (avainesine) => Golden Berry
     + branches: paikka josta lichen löytyy => Oak branches
     + breeze => Faery circle, aloituspaikka tähän, eli 12
         + Enchanted ring => Glinting hollow
-    - winds
-    - ferns
-    - willows
-  - Echoing
-    - petal (avainesine)
-    - Echo chambers (paikka, johon petal tuo kaiut)
-    - glade
-    - pool
-    - clearing
-    - hall
+    + winds => Fernwatch clearing
+    + ferns => Palegrove
+    + willows, Whispering Willows on niin hyvä nimi, että se saa jäädä
+  + Echoing
+    + petal (avainesine), saa olla tällä nimellä
+    + Echo chambers (paikka, johon petal tuo kaiut), saa olla tällä nimellä
+    + glade, ei liity mihinkään kaikuihin => Ancient Glade
+    + pool => Shimmering Pool
+    + clearing, täällä pitää kuunnella puita => Rustling trees
+    + hall => Vast hall
 - paikkojen kuvauksiin vihjettä mitä niissä pitäisi tehdä, ja muista kuvauksista vihjeenomaiset tekstit pois
-- loppuun onnittelutekstit
+    - echo petal: singing crystalsin luona kuihtuneita kukkia, jollaisia sitten on echo petalin "huoneessa", eli Lost traveler's campissa, sekä siellä mistä echo pitää käydä hakemassa
++ loppuun onnittelutekstit

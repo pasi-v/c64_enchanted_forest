@@ -1,0 +1,192 @@
+# Treasure
+
+## Problems and solutions
+
+Problem: Purify the corrupted crystal obelisk
+Solution: Recharge the Crystal Veins, Purify the Mirror Pool and Restore a missing note to the Singing Crystals
+Objects needed: Nothing
+
+Problem: Recharge the Crystal Veins
+Solution: Touch the veins with Heartstone Fragment
+Objects needed: Heartstone Fragment
+
+Problem: Heartstone Fragment
+Solution: Use Bearded Lichen to release the fragment
+Objects needed: Bearded Lichen (hidden in branches)
+
+Problem: Purify the Mirror Pool
+Solution: Pour Essence of the Moonlit Glade into the pool
+Objects needed: Essence of the Moonlit Glade
+
+Problem: Make Essence of the Moonlit Glade
+Solution: Combine Celestial Tear, Misty Dewdrop and Golden Berry in Moonlit Pond
+Objects needed: Celestial Tear, Misty Dewdrop and Golden Berry
+
+Problem: Transport liquids (Essence of the Moonlit Glade, Celestial Tear and Misty Dewdrop)
+Solution: Find Vessel of Reflection
+Objects needed: Vessel of Reflection
+
+Problem: Find Vessel of Reflection
+Solution: Listen at Luminous Statues, Rustling Trees and Whispering Willows and then speak to Forgotten Altar
+Objects needed: Nothing
+
+Problem: Get Celestial Tear
+Solution: Touch the celestial symbols in order Star, Moon, Comet.
+Objects needed: Nothing
+
+Problem: Figure out the order of celestial symbols
+Solution: Examine wall in Crumbling Temple, then examine star chart
+Objects needed: Nothing
+
+Problem: Find Misty Dewdrop
+Solution: Examine fern
+Objects needed: Nothing
+
+Problem: Find Golden Berry
+Solution: Examine bush
+Objects needed: Nothing
+
+Problem: Restore a missing note
+Solution: Collect echoes of the missing note to the Echoing Petal by visiting first Singing Crystals, then Echo Chamber to pick up the echo and finally Singing Crystals again to play back the missing note.
+Objects needed: Echoing Petal
+
+
+## Winning the game
+
+The player must purify the corrupted crystal obelisk in the Crystal Caves. To do that the other locations of the crystal caves must be restored: 
+
+- recharge The Crystal Veins: Heartstone Fragment
+- Purify the Mirror Pool by bringing enchanted water (Essence of the Moonlit Glade) to from the Moonlit Pond
+- restore a missing note to The Singing Crystals
+    - Tämä voisi oikeastaan toimia Echoing Petalilla paremmin.
+    - Echoing Petaliin voi kerätä äänen jostain muusta paikasta ja siten kantaa äänen tänne.
+        - Whispering Glade, Whispering Willows
+
+
+Each three main parts of the quest needs a treasure from somewhere in the forest to be brought to the Crystal Cave.
+
+
+Summary of the Treasures:
+
+* Heartstone Fragment: Found in the Ancient Oak by solving the carving puzzle.
+* Celestial Tear: Located in the Ruins of Eldoria, obtained by aligning celestial symbols in the observatory.
+* Essence of the Moonlit Glade: Collected from the Moonlit Glade by solving the puzzle related to the Mirror Pool.
+
+These treasures will serve as critical components in the player's quest to purify the corrupted crystal obelisk in the Crystal Cave, each with its own unique story and challenges to overcome.
+
+
+## 1. The Heartstone Fragment
+
+Location: The Ancient Oak, Elder's Nook
+
+Description: A glowing fragment of a heartstone, a powerful gem that resonates with the life force of the forest. It is said to amplify the healing properties of other magical items.
+
+Inside the Ancient Oak’s hollow trunk, roots glow faintly as they entangle the Heartstone Fragment. Nearby, a rune on the bark reads:
+"The heart awakens with a touch of life's enduring thread."
+
+How to Obtain: The player must solve a puzzle involving the carvings on the Great Trunk of the Ancient Oak. Once they correctly interpret the symbols representing life and growth, a hidden compartment opens, revealing the Heartstone Fragment.
+
+The player notices beard lichen hanging from the Oak Branches. Typing EXAMINE BRANCHES reveals: "Threads of silvery-green lichen sway gently, glimmering faintly in the light."
+
+Typing TAKE LICHEN allows the player to collect it.
+
+Back at the hollow, the player uses the lichen. Typing USE LICHEN triggers the fragment’s release. The roots retract, and the Heartstone Fragment becomes accessible.
+
+
+## 4. Echoing Petal
+
+Location: Misty Hollow, Lost Traveler's Camp (42)
+
+Description: A rare flower that blooms only in places where sounds are amplified. Its petals shimmer softly, reflecting the ambient sounds around them.
+
+How to Obtain: The player must listen for a specific echo in the grove and follow the sound to a hidden nook where the Echoing Petals grow.
+
+Siirrän tämän pääquestiksi, koska tämä sopii hyvin nuottien palauttamiseen.  Ehkä niin, että Echoing Petaliin voi kerätä äänen josain muusta paikasta.
+
+Täydennettävä ääni on paikassa The Grove of Echoes, Echo Chamber.
+
+Kun menee Echoing Petalin kanssa Singing Crystalsin luo, se poimii kaiun niiden laulusta.  Kun sen jälkeen menee Echo Chamberiin, Chamber täydentää äänen ja sen jälkeen Petalin voi viedä kristallien luo ja palauttaa niiden äänen.
+
+
+## 3. The Essence of the Moonlit Glade
+
+Location: Moonlit Glade, Moonlit Pond
+
+Description: A powerful vial of enchanted water infused with the magic of the moonlight and the forest. To create this essence, the player must gather three special ingredients, each from a different area of the forest.
+
+How to Obtain: The player must engage with the locations in the Moonlit Glade and solve the puzzle involving the enchanted waters of The Mirror Pool. This could involve collecting specific ingredients found around the glade and bringing them to the pool to create the Essence of the Moonlit Glade.
+
+Essencen hankkimiseksi pelaajan on tuotava Moonlit Pondiin kolme muuta ainesosaa:
+
+* The Celestial Tear
+* Misty Dewdrop: Found in Misty Hollow, requiring navigation through the fog and solving a fern-related puzzle.
+* Golden Berry: Gathered from Whispering Glade, obtained by examining a bush
+
+
+With these ingredients, the player can create the Essence of the Moonlit Glade at the Moonlit Glade, which will contribute to purifying the mirror pool in the Crystal Cave.
+
+
+## 2. The Celestial Tear
+
+Location: The Ruins of Eldoria, Ancient Observatory
+
+Description: A tear-shaped crystal that captures the essence of starlight. It is imbued with ancient magic and is believed to hold the wisdom of the Eldorian people.
+
+How to Obtain: To retrieve the Celestial Tear, the player must realign the celestial symbols in the Ancient Observatory. Once the correct constellation is formed, the tear materializes at the center of the observatory, granting the player access to its magical properties.
+
+Crumbling Temple: EXAMINE WALL => löytyy STAR CHART, joka näyttää elementit STAR, MOON, COMET
+
+Ancient Observatoryssa on sanottava tässä järjestyksessä TOUCH STAR, TOUCH MOON, TOUCH COMET.  Siellä on myös SUN ja PLANET.  Väärä järjestys nollaa systeemin.
+
+
+### 5. Misty Dewdrop
+
+Location: Misty Hollow, Fernwatch clearing
+
+Description: A dewdrop that forms on the leaves during the morning mist, imbued with the essence of dreams and whispers. It glows faintly and feels cool to the touch.
+
+How to Obtain: The player must navigate through the fog to find a specific fern that holds the dewdrop. They may need to solve a puzzle related to the whispers of the ferns to reveal the right path to the fern holding the dewdrop.
+
+EXAMINE FERN paljastaa DEWDROPin.
+
+
+### 6. Golden Berry
+
+Location: Whispering Glade, Luminous Stones
+
+Description: A small, glowing berry that hums gently when picked, containing the echoes of the forest's memories. It is said to enhance the magical properties of potions.
+
+How to Obtain: löytyy EXAMINE BUSH ja sitten tulee näkyviin, minkä jälkeen sen saa ihan poimimalla (TAKE BERRY).
+
+
+## Props
+
+### Vessel of Reflection
+
+There are some liquid treasures like the Misty Dewdrop, The Essence of the Moonlit Glade and The Celestial Tear. We need some kind of vial to hold the liquid while the player carries it to the target location.
+
+Description: This enchanted vial, known as the Vessel of Reflection, is a beautifully crafted container made from silver and crystal. Its surface is intricately etched with swirling patterns that seem to shift and shimmer when exposed to moonlight. The vial has the unique ability to hold and preserve any magical liquid placed inside, keeping its properties intact no matter how far the player travels. When a liquid is poured into it, the vessel emits a soft, ethereal glow, reflecting the liquid's magical essence. Only a container of this power can safely transport enchanted liquids like the Misty Dewdrop, Celestial Tear, or the Essence of the Moonlit Glade.
+
+Location: Forgotten Altar in the Whispering Glade
+
+The Vessel of Reflection is hidden within a secret compartment at the Forgotten Altar in the Whispering Glade. The altar is an ancient stone platform surrounded by thick trees and overgrown vines. The air around the altar is heavy with whispers, making it clear this is a sacred place of the forest’s ancient magic.
+
+
+Sub-Quest to Obtain the Vessel:
+
+Puzzle: To unlock the Forgotten Altar, the player must interact with the whispering trees around it, which hum a melody reminiscent of the forest's history. The whispers form part of a riddle, and solving it involves recalling specific echoes the player has heard during their travels in other parts of the forest, particularly in the Grove of Echoes and Whispering Glade.
+The player must arrange stones, leaves, or other objects found around the altar in a particular pattern to match the whispers they hear. When placed correctly, the whispers form into a cohesive melody, and the altar shifts to reveal a hidden compartment containing the Vessel of Reflection.
+
+Puzzle for the Vessel of Reflection:
+
+Location: Forgotten Altar in the Whispering Glade
+
+At the Forgotten Altar, the player finds an inscription on the altar stone, which reads:
+
+"To find what reflects, you must hear what whispers. Seek the three voices, and they shall reveal the way."
+
+Simple Puzzle Design:
+
+The player needs to LISTEN at three specific locations around the Whispering Glade (e.g., a tree, a rock, a stream). When the player types the verb LISTEN at each location, they will hear a whisper giving them a single word clue (such as "sun," "moon," or "star").
+
+After listening at all three locations, the player returns to the altar and types SPEAK ALTAR to reveal the hidden compartment.  This action causes the altar to open, revealing the Vessel of Reflection.
