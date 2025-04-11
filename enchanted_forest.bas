@@ -287,14 +287,14 @@
 20010 rem room names, d$()
 20020 data Oak branches, "Elder's Nook", Crystal veins, Crystal obelisk, Shattered entrance, Glinting hollow, Twinkling pond
 20030 data Great trunk, Rooted path, Mirror pool, Singing crystals, Faery statues, Faery circle, Hidden pathway
-20040 data Echoing glade, Memory trees, Sounding stones, Moonlit pond, Celestial path, Silver altar, Faery lanterns
-20050 data Fernwatch clearing, Echoing pool, Echo chambers, Twisted roots, Gnarled tree, Luminescent grove, Luminous stones
-20060 data Palegrove, Foggy grove, Thorny barrier, Enchanted clearing, Bramble maze, Shadowy path, Echoing clearing
+20040 data Ancient glade, Memory trees, Sounding stones, Moonlit pond, Celestial path, Silver altar, Faery lanterns
+20050 data Fernwatch clearing, Shimmering pool, Echo chambers, Twisted roots, Gnarled tree, Luminescent grove, Luminous stones
+20060 data Palegrove, Foggy grove, Thorny barrier, Enchanted clearing, Bramble maze, Shadowy path, Rustling trees
 20070 data Enchanted mists, Misty pond, Ancient observatory, Glimmering falls, Reflected grove, Swaying reeds, Whispering willows
-20080 data "Lost traveler's camp", Crumbling temple, Timeworn library, Echoing hall, Forgotten garden, Wishing stones, Forgotten altar
+20080 data "Lost traveler's camp", Crumbling temple, Timeworn library, Vast hall, Forgotten garden, Wishing stones, Forgotten altar
       
 20090 rem long descriptions, ld$()
-20100 data "The lower branches of the Ancient Oak are thick and sprawling, creating a canopy that filters sunlight into beautiful patterns on the ground."
+20100 data "The lower branches of the Ancient Oak are thick and sprawling, creating a canopy that filters moonlight into beautiful patterns on the ground."
 20110 data "A small clearing at the base of the tree, surrounded by fallen leaves and littered with curious stones and artifacts from previous visitors."
 20120 data "Narrow corridors lined with glittering veins of crystals, pulsating with faint magical energy. These veins seem to be connected to the forest's magic, but their glow is dim, as if something is draining their power."
 20130 data "A towering obelisk made of dark, corrupted crystal stands in the heart of the cave. It crackles with sinister energy, contrasting with the rest of the cave's dim glow. This is the source of the forest's corruption."
@@ -332,14 +332,14 @@
 20450 data "An area where the fog thickens and glows faintly. Magical creatures can be seen flitting about, though they remain elusive. The mist seems to change colour."
 20460 data "A serene pond shrouded in mist, with the water reflecting the ghostly outlines of the trees around it. Occasionally, shimmering shapes can be seen moving just beneath the surface."
 20470 data "A circular stone structure with an open roof, surrounded by faded star maps and celestial carvings. It feels alive with the magic of the stars and is an excellent place to stargaze."
-20480 data "A picturesque waterfall where the stream cascades down a series of smooth stones, creating a dazzling display of shimmering water that sparkles in the sunlight. Mist rises from the base, creating a magical atmosphere."
+20480 data "A picturesque waterfall where the stream cascades down a series of smooth stones, creating a dazzling display of shimmering water that sparkles in the moonlight. Mist rises from the base, creating a magical atmosphere."
 20490 data "A serene area where the stream widens, creating a mirrored surface that perfectly reflects the trees and sky above. The tranquility is occasionally disturbed by the sounds of nature."
 20500 data "Tall reeds line the banks of the stream, swaying gently in the breeze. The rustling sounds create a soothing backdrop."
 20510 data "A cluster of ancient willow trees, their long, draping branches swaying gently despite the absence of wind. The willows seem to murmur softly, sharing stories of the forest's past."
 20520 data "An abandoned campsite with remnants of a fire, scattered belongings, and signs of a previous traveler who got lost in the mist. Old maps and notes lie around, hinting at forgotten paths and treasures."
 20530 data "The remnants of a once-grand temple, with broken pillars and an ornate entrance partially concealed by vines and moss. Mysterious carvings adorn the walls, hinting at the history of Eldoria."
 20540 data "A large room filled with dusty shelves that hold ancient books and scrolls, some of which are partially disintegrated. A few tomes still radiate magical energy, hinting at their importance."
-20550 data "A vast hall with a high ceiling and shattered stained-glass windows, allowing beams of sunlight to filter in. The acoustics here amplify sounds, creating a haunting atmosphere as echoes of the past can be heard."
+20550 data "A vast hall with a high ceiling and shattered stained-glass windows, allowing beams of moonlight to filter in. The acoustics here amplify sounds, creating a haunting atmosphere as echoes of the past can be heard."
 20560 data "A once-beautiful garden now overtaken by weeds and wildflowers. Crumbling stone paths lead to a central fountain, which is dry but still holds remnants of enchantment."
 20570 data "A series of flat stones arranged in a line across the stream, each engraved with symbols that represent different wishes or desires. The stones are partially submerged and appear to glow faintly."
 20580 data "An ancient stone altar overgrown with vines and moss. The surface is etched with faded runes that seem to come alive when whispered to."
