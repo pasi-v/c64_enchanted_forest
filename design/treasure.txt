@@ -7,7 +7,7 @@ Solution: Recharge the Crystal Veins, Purify the Mirror Pool and Restore a missi
 Objects needed: Nothing
 
 Problem: Recharge the Crystal Veins
-Solution: Touch the veins with Heartstone Fragment
+Solution: Touch the veins with Heartstone Fragment (USE heartstone fragment)
 Objects needed: Heartstone Fragment
 
 Problem: Heartstone Fragment
@@ -27,7 +27,7 @@ Solution: Find Vessel of Reflection
 Objects needed: Vessel of Reflection
 
 Problem: Find Vessel of Reflection
-Solution: Listen at Luminous Statues, Rustling Trees and Whispering Willows and then speak to Forgotten Altar
+Solution: Listen at Luminous Stones, Rustling Trees and Whispering Willows and then speak to Forgotten Altar
 Objects needed: Nothing
 
 Problem: Get Celestial Tear
@@ -152,7 +152,7 @@ EXAMINE FERN paljastaa DEWDROPin.
 
 ### 6. Golden Berry
 
-Location: Whispering Glade, Luminous Stones
+Location: Golden Grove
 
 Description: A small, glowing berry that hums gently when picked, containing the echoes of the forest's memories. It is said to enhance the magical properties of potions.
 

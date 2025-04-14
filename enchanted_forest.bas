@@ -129,20 +129,20 @@
 1630 if rm=43 and ob=21 then m$="You see star, moon and comet": return
 1635 rem examine fern (27) at 21 to reveal dewdrop (5)
 1640 if rm=21 and ob=27 then f(5)=0: m$="You found a misty dewdrop": return
-1645 rem examine bush (28) at 27 to reveal berry (6)
-1650 if rm=27 and ob=28 then f(6)=0: m$="You found a golden berry": return
+1645 rem examine bush (28) at 25 to reveal berry (6)
+1650 if rm=25 and ob=28 then f(6)=0: m$="You found a golden berry": return
 1685 m$="You see nothing special about "+w$
 1690 return
      
 1700 rem use
 1710 rem use lichen (8) at 1 to reveal fragment (3)
 1720 if rm=1 and ob=8 then f(3)=0: m$="The Heartstone Fragment is released": return
-1730 m$="It does not seem to do anything"
+1730 rem use fragment (3) at 2 to recharge veins f(9)=1
+1740 if rm=2 and ob=3 then f(9)=1: m$="You recharge the Crystal Veins": return
+1750 m$="It does not seem to do anything"
 1790 return
      
 1800 rem touch
-1810 rem touch fragment (3) at 2 to recharge veins f(9)=1
-1820 if rm=2 and ob=3 then f(9)=1: m$="You recharge the Crystal Veins": return
 1830 if rm=37 then gosub 2300: return: rem touch celestials
 1840 if rm=3 and f(9)=1 and f(10)=1 and f(11)=1 then gosub 3200: rem win
 1850 if rm=3 then m$="The obelisk is still corrupted": return
@@ -211,7 +211,8 @@
 8999 rem initialize 
 9000 rem reserve arrays
 9001 print chr$(14): rem character set
-9002 print "{clr}Enchanted Forest": print "Loading data..."
+9002 poke 53280,0: poke 53281,0
+9003 print "{clr}Enchanted Forest": print "Loading data..."
 9005 rm=12: rem starting location
 9010 nr=49: rem number of rooms
 9020 dim d$(nr): rem room names
@@ -288,22 +289,22 @@
 20020 data Oak branches, "Elder's Nook", Crystal veins, Crystal obelisk, Shattered entrance, Glinting hollow, Twinkling pond
 20030 data Great trunk, Rooted path, Mirror pool, Singing crystals, Faery statues, Faery circle, Hidden pathway
 20040 data Ancient glade, Memory trees, Sounding stones, Moonlit pond, Celestial path, Silver altar, Faery lanterns
-20050 data Fernwatch clearing, Shimmering pool, Echo chambers, Twisted roots, Gnarled tree, Luminescent grove, Luminous stones
+20050 data Fernwatch clearing, Shimmering pool, Echo chambers, Twisted roots, Golden grove, Luminescent grove, Luminous stones
 20060 data Palegrove, Foggy grove, Thorny barrier, Enchanted clearing, Bramble maze, Shadowy path, Rustling trees
 20070 data Enchanted mists, Misty pond, Ancient observatory, Glimmering falls, Reflected grove, Swaying reeds, Whispering willows
 20080 data "Lost traveler's camp", Crumbling temple, Timeworn library, Vast hall, Forgotten garden, Wishing stones, Forgotten altar
-      
+
 20090 rem long descriptions, ld$()
-20100 data "The lower branches of the Ancient Oak are thick and sprawling, creating a canopy that filters moonlight into beautiful patterns on the ground."
-20110 data "A small clearing at the base of the tree, surrounded by fallen leaves and littered with curious stones and artifacts from previous visitors."
-20120 data "Narrow corridors lined with glittering veins of crystals, pulsating with faint magical energy. These veins seem to be connected to the forest's magic, but their glow is dim, as if something is draining their power."
-20130 data "A towering obelisk made of dark, corrupted crystal stands in the heart of the cave. It crackles with sinister energy, contrasting with the rest of the cave's dim glow. This is the source of the forest's corruption."
+20100 data "Twisting limbs stretch skyward, draped with pale, trailing growth. The air is still, the bark damp - something old clings here, waiting to be noticed."
+20110 data "Gnarled roots clutch a glowing shard deep in the oak's hollow. A rune nearby whispers of life's enduring thread - something soft, something clinging to ancient bark."
+20120 data "Narrow corridors lined with glittering veins of crystals, pulsating with faint magical energy. At their center lies a stone socket, as if waiting for something warm, something alive - to wake them."
+20130 data "A towering obelisk made of dark, corrupted crystal stands in the heart of the cave. This is the source of the forest's corruption. Three paths lead away - each pulsing faintly - as if the land itself waits for something to be restored."
 20140 data "The entrance to the cave is a large, jagged opening surrounded by shimmering crystal shards embedded in the ground and walls. The light reflects off the crystals, casting faint rainbows along the cavern floor."
 20150 data "A shallow depression ringed with silver-blossomed shrubs. Specks of light drift lazily through the air like fireflies, though no source can be seen. The ground sparkles faintly underfoot, as if dusted with crushed crystal."
-20160 data "A small, crystal-clear pond at the center of the circle, reflecting the stars above, even during the day. Tiny lights flit above the water's surface, resembling faeries."
+20160 data "A small, crystal-clear pond at the center of the circle, reflecting the stars above. Tiny lights flit above the water's surface, resembling faeries."
 20170 data "The colossal trunk of the Ancient Oak. Its bark is adorned with intricate carvings and symbols representing the history and magic of the forest. The air around the trunk feels charged with energy."
 20180 data "A winding pathway formed by the exposed roots of the Ancient Oak, leading away from the tree and toward the Crystal Cave and the Grove of Echoes. The roots seem to pulse gently, as if alive."
-20190 data "A small underground pool surrounded by crystal formations. The water is still, almost unnaturally so, reflecting the surrounding crystals perfectly."
+20190 data "A small underground pool surrounded by crystal formations. Dark water lies still, its surface dull and silent. Faint ripples press outward, as if thirsting for light. The basin feels expectant - something must be offered."
 20200 data "A chamber filled with hanging crystals that chime faintly when touched. The sound they produce is melodic and soothing, but also feels incomplete, as if part of the harmony is missing."
 20210 data "A collection of ancient stone statues depicting faeries in various poses, overgrown with vines and flowers. Some statues seem to shimmer as if they are alive."
 20220 data "A ring of mushrooms that served as a portal to the forest. The area is surrounded by shimmering lights, hinting at its magical nature."
@@ -311,15 +312,15 @@
 20240 data "A small open area near the base of the Ancient Oak, where the sounds of the grove blend harmoniously with the whispers of the tree. The ground is carpeted with soft moss, and the atmosphere feels tranquil yet alive."
 20250 data "A group of ancient trees with twisted trunks and gnarled branches. Each tree seems to pulse with a faint glow and resonates with the echoes of past conversations and events."
 20260 data "A circle of large, flat stones that emit different tones when struck. Each stone resonates with its unique sound, and when played together, they create a haunting melody."
-20270 data "A tranquil pond that perfectly mirrors the moon above, making it look like a piece of the sky has fallen to the earth. The water shimmers and ripples gently, with occasional fish gliding beneath the surface."
+20270 data "A tranquil pond that perfectly mirrors the moon above, making it look like a piece of the sky has fallen to the earth. The water shimmers and ripples gently, as if awaiting a union of rare and shimmering things."
 20280 data "A winding trail that glows faintly underfoot, resembling a starry sky. This path leads to various other locations within the Moonlit Glade and connects to hidden areas throughout the forest."
 20290 data "A flat stone altar surrounded by a circle of white pebbles that reflects the moonlight beautifully. The altar is engraved with ancient symbols that hint at the magic of the forest."
 20300 data "A cluster of floating lanterns that drift gently through the air, illuminating the glade with soft, colorful light. Each lantern holds a different memory or story related to the forest."
 20310 data "A quiet, mist-shrouded glade where tall ferns sway gently despite the still air. Dew clings to every frond, glistening like glass pearls."
 20320 data "A small, still pond at the center of the grove. The surface reflects the sky, but ripples and echoes distort the reflections, showing fleeting glimpses of past events."
-20330 data "A large, open space surrounded by high, curved walls of stone and dense trees that create a natural amphitheater. Sounds reverberate here, making whispers and footsteps echo dramatically."
+20330 data "A cavern of smooth stone, where every sound is magnified and stretched. The air hums with a faint, melodic echo. As you listen closely, the chamber seems to offer something: an echo ready to be captured."
 20340 data "A network of exposed roots that protrude from the ground, forming an intricate pattern. Some roots glow faintly, suggesting a connection to the forest's magic."
-20350 data "An ancient tree with twisted roots and branches that seem to form a natural archway. The tree is home to various insects and small creatures, adding to the vibrant ecosystem of the thicket."
+20350 data "Twisted branches stretch overhead, their bark dark with age. Beneath them, a thicket of thorny bushes hides something gleaming: something catches the light, beckoning to be found."
 20360 data "A serene area filled with tall, shimmering trees that seem to glow softly in the moonlight. Bioluminescent flowers carpet the ground, illuminating the paths with a gentle, ethereal light."
 20370 data "A circle of smooth, glowing stones, each radiating a different color. The stones pulse rhythmically, and the whispers seem to crescendo as you approach."
 20380 data "A quiet grove where the trees are white-barked and leafless, their twisted limbs reaching skyward like frozen dancers. The grass here is soft and silvery, glowing faintly underfoot."
@@ -328,21 +329,21 @@
 20410 data "A small clearing within the thicket that seems oddly peaceful despite the surrounding thorns. Here, the ground is soft, and a few wildflowers bloom brightly, illuminated by a shaft of moonlight filtering through the branches."
 20420 data "A dense labyrinth of thorny vines and bushes that shift and change, making it difficult to find a way through. The air is thick with the scent of wildflowers and the sound of rustling leaves."
 20430 data "A narrow, winding trail that appears darker than the surrounding area. The whispers here grow louder and more intense, creating a sense of urgency."
-20440 data "A wide, open space surrounded by towering trees. The sound of whispers reverberates through the glade, creating an almost hypnotic effect. The ground is covered in soft moss, making it feel like a natural amphitheater."
+20440 data "A wide, open space surrounded by towering trees. Tall trunks sway in no wind, their leaves murmuring like distant voices. The forest speaks here - but only to those who stay still and truly hear."
 20450 data "An area where the fog thickens and glows faintly. Magical creatures can be seen flitting about, though they remain elusive. The mist seems to change colour."
 20460 data "A serene pond shrouded in mist, with the water reflecting the ghostly outlines of the trees around it. Occasionally, shimmering shapes can be seen moving just beneath the surface."
-20470 data "A circular stone structure with an open roof, surrounded by faded star maps and celestial carvings. It feels alive with the magic of the stars and is an excellent place to stargaze."
+20470 data "A circular stone structure with an open roof, surrounded by faded star maps and celestial carvings. There is a pentagram with glowing comet, sun, planet, moon and star symbol in it."
 20480 data "A picturesque waterfall where the stream cascades down a series of smooth stones, creating a dazzling display of shimmering water that sparkles in the moonlight. Mist rises from the base, creating a magical atmosphere."
 20490 data "A serene area where the stream widens, creating a mirrored surface that perfectly reflects the trees and sky above. The tranquility is occasionally disturbed by the sounds of nature."
 20500 data "Tall reeds line the banks of the stream, swaying gently in the breeze. The rustling sounds create a soothing backdrop."
 20510 data "A cluster of ancient willow trees, their long, draping branches swaying gently despite the absence of wind. The willows seem to murmur softly, sharing stories of the forest's past."
 20520 data "An abandoned campsite with remnants of a fire, scattered belongings, and signs of a previous traveler who got lost in the mist. Old maps and notes lie around, hinting at forgotten paths and treasures."
-20530 data "The remnants of a once-grand temple, with broken pillars and an ornate entrance partially concealed by vines and moss. Mysterious carvings adorn the walls, hinting at the history of Eldoria."
-20540 data "A large room filled with dusty shelves that hold ancient books and scrolls, some of which are partially disintegrated. A few tomes still radiate magical energy, hinting at their importance."
+20530 data "The remnants of a once-grand temple, with broken pillars and an ornate entrance partially concealed by vines and moss. Mysterious carvings adorn the walls, drawing your eye."
+20540 data "A large room filled with dusty shelves that hold ancient books and scrolls, some of which are partially disintegrated. Dust coats every surface, but the walls remain intact - etched with markings that seem to shift in the corner of your eye."
 20550 data "A vast hall with a high ceiling and shattered stained-glass windows, allowing beams of moonlight to filter in. The acoustics here amplify sounds, creating a haunting atmosphere as echoes of the past can be heard."
 20560 data "A once-beautiful garden now overtaken by weeds and wildflowers. Crumbling stone paths lead to a central fountain, which is dry but still holds remnants of enchantment."
 20570 data "A series of flat stones arranged in a line across the stream, each engraved with symbols that represent different wishes or desires. The stones are partially submerged and appear to glow faintly."
-20580 data "An ancient stone altar overgrown with vines and moss. The surface is etched with faded runes that seem to come alive when whispered to."
+20580 data "An ancient stone altar overgrown with vines and moss. The surface is etched with faded runes that seem to come alive when whispered to. Three shallow hollows glimmer faintly, waiting for the right words to be spoken."
 
 20600 rem routes, r$()
 20610 data d,s,se,wse,wse,wse,ws
@@ -362,7 +363,7 @@
 20730 data help, inventory, go, n, s, w, e, u, d, "get", take, examine, use, touch, listen, speak, score, look, mix, brew, pour
 
 20740 rem locations of gettable objects, l()
-20750 data 17,42,1,37,21,27,48,0
+20750 data 17,42,1,37,21,25,48,0
 
 
       
